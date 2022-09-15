@@ -14,7 +14,7 @@
      <td><%= s.description%></td>
      <td><%= link_to "edit", edit_student_path(s)%></td>  
      <td><%= link_to "show", student_path(s)%></td>
-     <td></td>
+     <td><%= link_to "delete", student_path(s), method: :delete, data: { "turbo-method": :delete }%></td>
     </tr>
 <% end %>
 </table>

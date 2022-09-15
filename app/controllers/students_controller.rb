@@ -37,6 +37,14 @@ class StudentsController < ApplicationController
         @std = Student.all
     end
 
+    def destroy
+        @std = Student.find(params[:id])
+        @std.destroy
+        flash[:notice]= "column destroyed"
+        redirect_to students_path
+    end
+
+
 
     
     private
