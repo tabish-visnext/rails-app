@@ -1,0 +1,20 @@
+<h1>listing all columns of a table</h1>
+
+<%= link_to "create to create new columns", new_student_path%>
+
+<table>
+<tr>
+   <th>Names</th>
+   <th>Descriptions </th>
+</tr>
+
+<% @std.each do |s|%>
+    <tr>
+     <td><%= s.name%></td>
+     <td><%= s.description%></td>
+     <td><%= link_to "edit", edit_student_path(s)%></td>  
+     <td><%= link_to "show", student_path(s)%></td>
+     <td></td>
+    </tr>
+<% end %>
+</table>

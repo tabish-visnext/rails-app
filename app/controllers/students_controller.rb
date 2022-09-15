@@ -33,6 +33,10 @@ class StudentsController < ApplicationController
         end
     end
 
+    def index
+        @std = Student.all
+    end
+
 
     
     private
